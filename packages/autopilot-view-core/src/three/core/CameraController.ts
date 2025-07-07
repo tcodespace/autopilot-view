@@ -10,7 +10,7 @@ export class CameraController {
   constructor(canvas: HTMLCanvasElement) {
     this.camera = new THREE.PerspectiveCamera(
       DEFAULT_CAMERA_VALUE.fov,
-      canvas.width / canvas.height,
+      canvas.clientWidth / canvas.clientHeight,
       DEFAULT_CAMERA_VALUE.near,
       DEFAULT_CAMERA_VALUE.far
     )
