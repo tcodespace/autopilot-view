@@ -29,8 +29,8 @@ export class SceneManager {
   }
 
   public resize() {
-    const { width, height } = this.canvas
-    this.cameraController.resize(width / height)
-    this.renderer.resize(width, height)
+    const { clientWidth, clientHeight } = this.canvas
+    this.cameraController.resize(clientWidth / clientHeight)
+    this.renderer.resize(clientWidth, clientHeight)
   }
 }

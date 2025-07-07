@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <BaseScene />
-  </div>
+  <BaseScene />
 </template>
 
 <script setup lang="ts">
