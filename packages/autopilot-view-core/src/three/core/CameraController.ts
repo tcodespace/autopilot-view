@@ -22,8 +22,8 @@ export class CameraController {
     )
 
     this.controls = new OrbitControls(this.camera, canvas)
-
-    this.controls.update()
+    this.controls.enableDamping = true
+    this.update()
   }
 
   public resize(aspect: number) {

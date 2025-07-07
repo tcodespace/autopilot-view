@@ -1,12 +1,12 @@
 import * as THREE from "three"
+import type { CameraController } from "./CameraController"
 
 export class Loop {
-  private clock: THREE.Clock = new THREE.Clock()
   private running: boolean = false
   constructor(
     private renderer: THREE.WebGLRenderer,
     private scene: THREE.Scene,
-    private camera: THREE.PerspectiveCamera
+    private cameraController: CameraController
   ) {}
 
   start() {
@@ -21,6 +21,7 @@ export class Loop {
   }
 
   private animation() {
-    this.renderer.render(this.scene, this.camera)
+    this.cameraController.update()
+    this.renderer.render(this.scene, this.cameraController.camera)
   }
 }
