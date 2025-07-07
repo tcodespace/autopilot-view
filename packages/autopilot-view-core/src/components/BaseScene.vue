@@ -7,7 +7,7 @@ import { debounce } from "rattail"
 import { SceneManager } from "@core/three/core/SceneManager"
 import { createGridHelper, createAxesHelper } from "@core/three/objects/Helper"
 
-let sceneManager: SceneManager | null = null
+let sceneManager: SceneManager
 
 function initBaseScene() {
   const canvas = document.getElementById("base-scene") as HTMLCanvasElement
@@ -21,7 +21,7 @@ function initBaseScene() {
 }
 
 const resize = debounce(() => {
-  sceneManager?.resize()
+  sceneManager.resize()
 }, 1000)
 
 onMounted(() => {
