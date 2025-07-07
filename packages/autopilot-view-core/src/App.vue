@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { BaseScene } from "@/components"
+import { BaseScene } from "@core/components"
 </script>
 
 <style scoped></style>
