@@ -4,10 +4,10 @@ import { Renderer } from "./Renderer"
 import { CameraController } from "./CameraController"
 
 export class SceneManager {
-  public scene: THREE.Scene
-  public renderer: Renderer
-  public cameraController: CameraController
-  public loop: Loop
+  private scene: THREE.Scene
+  private renderer: Renderer
+  private cameraController: CameraController
+  private loop: Loop
 
   constructor(private canvas: HTMLCanvasElement) {
     this.scene = new THREE.Scene()
@@ -26,6 +26,10 @@ export class SceneManager {
 
   public add(...objects: THREE.Object3D[]) {
     this.scene.add(...objects)
+  }
+
+  public addUpdateFn(fn: () => void) {
+    this.loop.addUpdateFn(fn)
   }
 
   public resize() {
