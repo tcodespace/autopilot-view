@@ -13,6 +13,9 @@ importers:
       '@autopilot-view/core':
         specifier: workspace:*
         version: link:../../packages/autopilot-view-core
+      normalize.css:
+        specifier: ^8.0.1
+        version: 8.0.1
       vue:
         specifier: ^3.5.17
         version: 3.5.17(typescript@5.8.3)
@@ -595,6 +598,9 @@ packages:
     resolution: {integrity: sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==}
     engines: {node: '>= 4.4.x'}
     hasBin: true
+
+  normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
   parse-node-version@1.0.1:
     resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
@@ -1196,6 +1202,8 @@ snapshots:
       iconv-lite: 0.6.3
       sax: 1.4.1
     optional: true
+
+  normalize.css@8.0.1: {}
 
   parse-node-version@1.0.1: {}
 

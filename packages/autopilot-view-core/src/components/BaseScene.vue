@@ -1,7 +1,7 @@
 <template>
   <div class="base-scene">
     <div class="base-scene-stats"></div>
-    <canvas id="base-scene-canvas" width="500" height="500" />
+    <canvas id="base-scene-canvas" />
   </div>
 </template>
 
@@ -31,10 +31,11 @@ function initBaseScene() {
 
 const resize = debounce(() => {
   sceneManager.resize()
-}, 1000)
+}, 200)
 
 onMounted(() => {
   initBaseScene()
+  sceneManager.resize()
   window.addEventListener("resize", resize)
 })
 
@@ -45,5 +46,11 @@ onBeforeUnmount(() => {
 <style lang="less" scoped>
 .base-scene {
   position: relative;
+  height: 100%;
+  width: 100%;
+  #base-scene-canvas {
+    height: 100% !important;
+    width: 100% !important;
+  }
 }
 </style>
